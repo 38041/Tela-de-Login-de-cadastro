@@ -32,14 +32,6 @@
   color: #fff;
 }
 
-.input-field .icon {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #fff;
-}
 
 .container .recall-forget {
   display: flex;
@@ -47,7 +39,6 @@
   font-size: 14.5px;
   margin: -15px 0 15px;
 }
-
 
 
 

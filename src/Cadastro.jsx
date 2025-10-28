@@ -1,12 +1,20 @@
-import { useState } from "react";
-import { FaUser, FaLock } from "react-icons/fa";
-import "./Login.css";
+import React from "react";
+import "./App.css";
+import { Link } from "react-router";
 
-const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (event) => {
+function Cadastro()
+const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const navigate = useNavigate(); {
+  return (
+    <>
+      <div>
+        Página 2
+        <br />
+        <Link to="/"> Login</Link>
+      </div>
+      const handleSubmit = (event) => {
     event.preventDefault();
 
     console.log("Dados de Login:", { username, password });
@@ -24,7 +32,22 @@ const Login = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          
+  )         
+  <div className="input-field">
+          <input
+            type="Name"
+            placeholder="Nome"
+            required
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+      
+        </div>
+
+        <div className="recall-forget">
+          <label>
+            <input type="checkbox" />
+
         </div>
         <div className="input-field">
           <input
@@ -40,19 +63,19 @@ const Login = () => {
         <div className="recall-forget">
           <label>
             <input type="checkbox" />
-            Lembre de mim
+          
           </label>
-          <a href="#">Esqueceu sua senha?</a>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Cadastrar</button>
         <div className="signup-link">
-          <p>
-            Não tem uma conta? <a href="#">Registar</a>{" "}
+        <p>
+           Já tem conta? <a href="#">Logar</a>{" "}
           </p>
         </div>
       </form>
     </div>
+    </>
   );
-};
+}
 
-export default Login;
+export default Cadastro;
