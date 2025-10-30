@@ -1,81 +1,42 @@
 import React from "react";
 import "./App.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
-function Cadastro()
-const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const navigate = useNavigate(); {
+function Cadastro() {
   return (
-    <>
-      <div>
-        Página 2
-        <br />
-        <Link to="/"> Login</Link>
+    <div className="login-container">
+      <div className="login-box">
+        <h1>CADASTRO</h1>
+
+        <div className="input-group">
+          <label>NOME COMPLETO:</label>
+          <input type="text" placeholder="Digite seu nome completo" />
+        </div>
+
+        <div className="input-group">
+          <label>EMAIL:</label>
+          <input type="email" placeholder="Digite seu e-mail" />
+        </div>
+
+        <div className="input-group">
+          <label>SENHA:</label>
+          <input type="password" placeholder="Crie uma senha" />
+        </div>
+
+        <button className="btn-login">CADASTRAR</button>
+
+        <p className="register-text">
+          Já tem conta?{" "}
+          <small>
+            <Link to="/">Fazer login</Link>
+          </small>
+        </p>
       </div>
-      const handleSubmit = (event) => {
-    event.preventDefault();
-
-    console.log("Dados de Login:", { username, password });
-  };
-
-  return (
-    <div className="container">
-      <form onSubmit={handleSubmit}>
-        <h1>Faça seu login</h1>
-        <div className="input-field">
-          <input
-            type="text"
-            placeholder="E-mail"
-            required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-  )         
-  <div className="input-field">
-          <input
-            type="Name"
-            placeholder="Nome"
-            required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-      
-        </div>
-
-        <div className="recall-forget">
-          <label>
-            <input type="checkbox" />
-
-        </div>
-        <div className="input-field">
-          <input
-            type="password"
-            placeholder="Senha"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-      
-        </div>
-
-        <div className="recall-forget">
-          <label>
-            <input type="checkbox" />
-          
-          </label>
-        </div>
-        <button type="submit">Cadastrar</button>
-        <div className="signup-link">
-        <p>
-           Já tem conta? <a href="#">Logar</a>{" "}
-          </p>
-        </div>
-      </form>
     </div>
-    </>
   );
 }
 
 export default Cadastro;
+
+    
+ 
